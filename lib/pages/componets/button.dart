@@ -3,8 +3,8 @@ import 'package:hexcolor/hexcolor.dart';
 
 class MyButton extends StatelessWidget {
   final Function()? onTap;
-
-  const MyButton({super.key, required this.onTap});
+  final String text;
+  const MyButton({super.key, required this.onTap, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -17,10 +17,10 @@ class MyButton extends StatelessWidget {
           color: HexColor("#0066FF"),
           borderRadius: BorderRadius.circular(8),
         ),
-        child: const Center(
+        child: Center(
           child: Text(
-            "Sign In",
-            style: TextStyle(
+            text,
+            style: const TextStyle(
               color: Colors.white,
               fontSize: 18,
               fontWeight: FontWeight.bold,

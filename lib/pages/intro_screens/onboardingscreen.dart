@@ -3,7 +3,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:soundsee/pages/intro_screens/intro_screen1.dart';
 import 'package:soundsee/pages/intro_screens/intro_screen2.dart';
 import 'package:soundsee/pages/intro_screens/intro_screen3.dart';
-import '../../login_page.dart';
+import 'package:soundsee/pages/authentication/login_page.dart';
 
 class OnboardingScreen extends StatefulWidget {
   const OnboardingScreen({super.key});

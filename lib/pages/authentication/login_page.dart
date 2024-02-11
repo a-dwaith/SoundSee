@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:soundsee/pages/componets/button.dart';
 import 'package:soundsee/pages/componets/squared_tile.dart';
-import 'pages/componets/text_field.dart';
+import 'package:soundsee/pages/componets/text_field.dart';
 import 'package:hexcolor/hexcolor.dart';
 
 class LogInPage extends StatefulWidget {
@@ -34,35 +34,20 @@ class _LogInPageState extends State<LogInPage> {
       Navigator.pop(context);
     } on FirebaseAuthException catch (e) {
       Navigator.pop(context);
-      if (e.code == 'user-not-found') {
-        wrongUsermessage();
-      } else if (e.code == 'wrong-password') {
-        wrongPasswordmessage();
-      }
+
+      // Error message
+      showerrorMessage(e.code);
     }
   }
 
 // todo Wrong username error message
-  void wrongUsermessage() {
-    const snackBar = SnackBar(
+  void showerrorMessage(String message) {
+    final snackBar = SnackBar(
       content: Text(
-        'Wrong username! Try again',
-        style: TextStyle(color: Colors.white),
+        message,
+        style: const TextStyle(color: Colors.white),
       ),
-      duration: Duration(seconds: 3),
-      backgroundColor: Colors.black,
-    );
-    ScaffoldMessenger.of(context).showSnackBar(snackBar);
-  }
-
-  //todo Wrong password message
-  void wrongPasswordmessage() {
-    const snackBar = SnackBar(
-      content: Text(
-        'Wrong password! Try again',
-        style: TextStyle(color: Colors.white),
-      ),
-      duration: Duration(seconds: 3),
+      duration: const Duration(seconds: 3),
       backgroundColor: Colors.black,
     );
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -145,6 +130,7 @@ class _LogInPageState extends State<LogInPage> {
                 const SizedBox(height: 25),
 
                 MyButton(
+                  text: 'Sign in',
                   onTap: signUserIn,
                 ),
 
