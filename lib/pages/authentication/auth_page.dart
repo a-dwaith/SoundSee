@@ -2,7 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:soundsee/pages/homepage.dart';
 import 'package:soundsee/pages/authentication/login_page.dart';
-// import 'package:soundsee/pages/splash_screen.dart';
+import 'package:soundsee/pages/splash_screen.dart';
 // import 'package:soundsee/pages/intro_screens/onboardingscreen.dart';
 
 class AuthPage extends StatelessWidget {
@@ -20,7 +20,7 @@ class AuthPage extends StatelessWidget {
           }
           // User not logged in
           else {
-            return const LogInPage();
+            return const SplashScreen();
           }
         },
       ),

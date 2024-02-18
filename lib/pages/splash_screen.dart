@@ -24,7 +24,7 @@ class _SplashScreenState extends State<SplashScreen> {
       ),
     );
   }
-
+ 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -50,14 +50,8 @@ class _SplashScreenState extends State<SplashScreen> {
                   fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 10),
-            // Center(
-            // child: Lottie.network(
-            // 'https://lottie.host/b72de766-353c-4b4a-ad22-7a170aaf3601/XLoLUECETg.json'),
-            // ),
             Center(
-              child: Lottie.network(
-                'https://lottie.host/b72de766-353c-4b4a-ad22-7a170aaf3601/XLoLUECETg.json',
-              ),
+                child: Lottie.asset('lib/assets/images/snap.json'),
             ),
           ],
         ),

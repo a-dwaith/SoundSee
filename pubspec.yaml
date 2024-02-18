@@ -33,6 +33,7 @@ flutter:
 
   assets:
      - lib/assets/images/Google.png
+     - lib/assets/images/snap.json
 
   fonts:
     - family: Ubuntu
