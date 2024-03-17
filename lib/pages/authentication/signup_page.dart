@@ -5,6 +5,7 @@ import 'package:soundsee/pages/componets/button.dart';
 import 'package:soundsee/pages/componets/squared_tile.dart';
 import 'package:soundsee/pages/componets/text_field.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:lottie/lottie.dart';
 
 class Signuppage extends StatefulWidget {
   const Signuppage({super.key});
@@ -97,12 +98,18 @@ class _SignuppageState extends State<Signuppage> {
               // Just a Lock Logo
 
               children: [
-                const SizedBox(height: 25),
-                Icon(
-                  Icons.lock,
-                  size: 100,
-                  // color: Colors.blue,
-                  color: HexColor("#000000"),
+                const SizedBox(height: 20),
+                // Icon(
+                // Icons.lock,
+                // size: 100,
+                // color: Colors.blue,
+                // color: HexColor("#000000"),
+                // ),
+                Lottie.asset(
+                  'lib/assets/images/signup.json',
+                  width: 150,
+                  height: 150,
+                  fit: BoxFit.fill,
                 ),
 
                 const SizedBox(height: 25),
@@ -110,7 +117,7 @@ class _SignuppageState extends State<Signuppage> {
                 // Welcome note
 
                 const Text(
-                  'Let\'s create an accont',
+                  'Let\'s create an account',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -124,14 +131,14 @@ class _SignuppageState extends State<Signuppage> {
                   hintText: "Name",
                   obscureText: false,
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
                 MyTextfield(
                   controller: emailController,
                   hintText: "Email",
                   obscureText: false,
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
 
                 // Password Text box
                 MyTextfield(
@@ -139,21 +146,21 @@ class _SignuppageState extends State<Signuppage> {
                   hintText: "Mobile number",
                   obscureText: false,
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
 
                 MyTextfield(
                   controller: udidController,
                   hintText: "UDID",
                   obscureText: false,
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
 
                 MyTextfield(
                   controller: passwordController,
                   hintText: "Password",
                   obscureText: true,
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
 
                 MyTextfield(
                   controller: confrimpasswordController,
@@ -191,14 +198,14 @@ class _SignuppageState extends State<Signuppage> {
                     ],
                   ),
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
                 const Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SquaredTile(imagePath: 'lib/assets/images/Google.png')
                   ],
                 ),
-                const SizedBox(height: 25),
+                const SizedBox(height: 15),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [

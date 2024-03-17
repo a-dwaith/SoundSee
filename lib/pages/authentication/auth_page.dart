@@ -4,6 +4,8 @@ import 'package:soundsee/pages/homepage.dart';
 import 'package:soundsee/pages/authentication/login_page.dart';
 import 'package:soundsee/pages/splash_screen.dart';
 // import 'package:soundsee/pages/intro_screens/onboardingscreen.dart';
+// import 'package:soundsee/pages/user_page/update_profile.dart';
+import 'package:soundsee/pages/user_page/update_profile.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -20,7 +22,7 @@ class AuthPage extends StatelessWidget {
           }
           // User not logged in
           else {
-            return const SplashScreen();
+            return const LogInPage();
           }
         },
       ),

@@ -4,6 +4,7 @@ import 'package:soundsee/pages/componets/button.dart';
 import 'package:soundsee/pages/componets/squared_tile.dart';
 import 'package:soundsee/pages/componets/text_field.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:lottie/lottie.dart';
 
 class LogInPage extends StatefulWidget {
   const LogInPage({super.key});
@@ -65,20 +66,26 @@ class _LogInPageState extends State<LogInPage> {
               // Just a Lock Logo
 
               children: [
-                const SizedBox(height: 50),
-                Icon(
-                  Icons.lock,
-                  size: 100,
-                  // color: Colors.blue,
-                  color: HexColor("#0066FF"),
+                const SizedBox(height: 20),
+                // Icon(
+                // Icons.lock,
+                // size: 100,
+                // color: Colors.blue,
+                // color: HexColor("#0066FF"),
+                // ),
+                Lottie.asset(
+                  'lib/assets/images/login.json',
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.fill,
                 ),
 
-                const SizedBox(height: 50),
+                const SizedBox(height: 20),
 
                 // Welcome note
 
                 const Text(
-                  'Welcome back you\'ve been missed',
+                  'Welcome back',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 20,
@@ -96,7 +103,7 @@ class _LogInPageState extends State<LogInPage> {
                   obscureText: false,
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 15),
 
                 // Password Text box
 

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:soundsee/pages/componets/button.dart';
 import 'package:soundsee/pages/componets/text_field.dart';
+import 'package:lottie/lottie.dart';
 
 class ForgotPasswordScreen extends StatefulWidget {
   const ForgotPasswordScreen({super.key});
@@ -53,11 +54,17 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
               // Just a Lock Logo
               children: [
                 const SizedBox(height: 20),
-                Icon(
-                  Icons.lock,
-                  size: 100,
-                  // color: Colors.blue,
-                  color: HexColor("#0066FF"),
+                // Icon(
+                // Icons.lock,
+                // size: 100,
+                // color: Colors.blue,
+                // color: HexColor("#0066FF"),
+                // ),
+                Lottie.asset(
+                  'lib/assets/images/forgot_password.json',
+                  width: 300,
+                  height: 300,
+                  fit: BoxFit.fill,
                 ),
                 const SizedBox(height: 50),
                 // Welcome note
